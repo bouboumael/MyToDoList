@@ -15,6 +15,7 @@ struct MyToDoListApp: App {
         WindowGroup {
             HomeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .preferredColorScheme(.light)
         }
     }
 }
