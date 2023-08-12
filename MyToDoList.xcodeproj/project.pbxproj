@@ -100,8 +100,6 @@
 			children = (
 				D3B8F0702A87F048000C5FC3 /* src */,
 				D3B8F0372A87DE3D000C5FC3 /* Assets.xcassets */,
-				D3B8F03C2A87DE3D000C5FC3 /* Persistence.swift */,
-				D3B8F03E2A87DE3D000C5FC3 /* MyToDoList.xcdatamodeld */,
 				D3B8F0392A87DE3D000C5FC3 /* Preview Content */,
 			);
 			path = MyToDoList;
@@ -135,10 +133,28 @@
 		D3B8F0702A87F048000C5FC3 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D3B8F0352A87DE3C000C5FC3 /* HomeView.swift */,
+				D3B8F0722A882192000C5FC3 /* data */,
+				D3B8F0712A88217A000C5FC3 /* view */,
 				D3B8F0332A87DE3C000C5FC3 /* MyToDoListApp.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		D3B8F0712A88217A000C5FC3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8F0352A87DE3C000C5FC3 /* HomeView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D3B8F0722A882192000C5FC3 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8F03C2A87DE3D000C5FC3 /* Persistence.swift */,
+				D3B8F03E2A87DE3D000C5FC3 /* MyToDoList.xcdatamodeld */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
