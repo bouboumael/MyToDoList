@@ -18,6 +18,7 @@
 		D3B8F0742A88232C000C5FC3 /* saveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8F0732A88232C000C5FC3 /* saveData.swift */; };
 		D3B8F0762A8823BF000C5FC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8F0752A8823BF000C5FC3 /* HomeView.swift */; };
 		D3B8F0792A882953000C5FC3 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8F0782A882953000C5FC3 /* TodoListView.swift */; };
+		D3B8F07C2A8831E6000C5FC3 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		D3B8F0732A88232C000C5FC3 /* saveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveData.swift; sourceTree = "<group>"; };
 		D3B8F0752A8823BF000C5FC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D3B8F0782A882953000C5FC3 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		D3B8F0712A88217A000C5FC3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8F07A2A883196000C5FC3 /* components */,
 				D3B8F0772A882614000C5FC3 /* page */,
 			);
 			path = view;
@@ -169,6 +172,14 @@
 				D3B8F0782A882953000C5FC3 /* TodoListView.swift */,
 			);
 			path = page;
+			sourceTree = "<group>";
+		};
+		D3B8F07A2A883196000C5FC3 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B8F03D2A87DE3D000C5FC3 /* Persistence.swift in Sources */,
+				D3B8F07C2A8831E6000C5FC3 /* TaskView.swift in Sources */,
 				D3B8F0342A87DE3C000C5FC3 /* MyToDoListApp.swift in Sources */,
 				D3B8F0792A882953000C5FC3 /* TodoListView.swift in Sources */,
 				D3B8F0402A87DE3D000C5FC3 /* MyToDoList.xcdatamodeld in Sources */,
