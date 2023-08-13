@@ -7,8 +7,8 @@
 
 import Foundation
 
-var dateFormatter: DateFormatter {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "dd/MM/yyyy"
-    return formatter
-}
+//var dateFormatter: DateFormatter {
+//    let formatter = DateFormatter()
+//    formatter.dateFormat = "dd/MM/yyyy"
+//    return formatter
+//}

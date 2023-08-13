@@ -6,17 +6,29 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TodoListView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Task.taskName, ascending: true)],
+        animation: .default)
+    private var tasks: FetchedResults<Task>
+    
     var body: some View {
         ScrollView {
             VStack {
                 Text("Mes taches en cours")
                     .font(.title)
                     .padding()
-                ForEach (1..<11) {_ in
-                    TaskView()
+                ForEach (tasks) {task in
+                    TaskView(task: task)
                 }
+            }
+            .onAppear {
+                print("Number of tasks: \(tasks.count)")
             }
         }
         .toolbar {
@@ -29,6 +41,7 @@ struct TodoListView: View {
                 }
             }
         }
+        .navigationTitle("Taches")
     }
 }
 
