@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct TodoListView: View {
     
@@ -47,6 +46,6 @@ struct TodoListView: View {
 
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListView()
+        TodoListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
