@@ -16,11 +16,11 @@ struct DetailTaskView: View {
                         Text(formattedDate(from: task.deadline!))
                     }
 
-                    Section(header: HeaderView(title: "Définition")) {
+                    Section(header: HeaderView(title: "Description")) {
                         Text(task.definition!.capitalized)
                     }
 
-                    Section(header: HeaderView(title: "Création")) {
+                    Section(header: HeaderView(title: "Date de Création")) {
                         Text(formattedDate(from: task.createdAt!))
                     }
                     
