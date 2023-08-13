@@ -105,6 +105,15 @@
 			path = type;
 			sourceTree = "<group>";
 		};
+		D3B62B3F2A8932F900071676 /* task */ = {
+			isa = PBXGroup;
+			children = (
+				D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */,
+				D3B62B3A2A89011E00071676 /* DetailTaskView.swift */,
+			);
+			path = task;
+			sourceTree = "<group>";
+		};
 		D3B8F0272A87DE3C000C5FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -203,8 +212,7 @@
 		D3B8F07A2A883196000C5FC3 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */,
-				D3B62B3A2A89011E00071676 /* DetailTaskView.swift */,
+				D3B62B3F2A8932F900071676 /* task */,
 			);
 			path = components;
 			sourceTree = "<group>";

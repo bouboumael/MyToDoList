@@ -40,7 +40,8 @@ struct TodoListView: View {
                 }
             }
         }
-        .navigationTitle("Taches")
+        .navigationTitle("Tâches")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
