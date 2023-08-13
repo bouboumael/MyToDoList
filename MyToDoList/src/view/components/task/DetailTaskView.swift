@@ -6,30 +6,27 @@ struct DetailTaskView: View {
 
     var body: some View {
         VStack {
-            VStack {
-                List {
-                    Section(header: HeaderView(title: "Tâche")) {
-                        Text(task.taskName!.capitalized)
-                    }
-                    
-                    Section(header: HeaderView(title: "Date limite")) {
-                        Text(formattedDate(from: task.deadline!))
-                    }
-
-                    Section(header: HeaderView(title: "Description")) {
-                        Text(task.definition!.capitalized)
-                    }
-
-                    Section(header: HeaderView(title: "Date de Création")) {
-                        Text(formattedDate(from: task.createdAt!))
-                    }
-                    
-                    Section(header: HeaderActionView()) {}
+            List {
+                Section(header: HeaderView(title: "Tâche")) {
+                    Text(task.taskName!.capitalized)
                 }
-                .listStyle(GroupedListStyle())
-                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                
+                Section(header: HeaderView(title: "Date limite")) {
+                    Text(formattedDate(from: task.deadline!))
+                }
+                
+                Section(header: HeaderView(title: "Description")) {
+                    Text(task.definition!.capitalized)
+                }
+                
+                Section(header: HeaderView(title: "Date de Création")) {
+                    Text(formattedDate(from: task.createdAt!))
+                }
+                
+                Section(header: HeaderActionView()) {}
             }
-        
+            .listStyle(GroupedListStyle())
+            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         }
         .navigationTitle("Détails")
         .navigationBarTitleDisplayMode(.inline)

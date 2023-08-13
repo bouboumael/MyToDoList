@@ -23,13 +23,13 @@ struct HomeView: View {
                         .padding(.top, 30)
                     Spacer()
                     NavigationLink(destination: TodoListView()){
-                        Text("Voir ma todo liste")
+                        Text("Ma liste de tâches".uppercased())
                             .bold()
                             .padding()
                             .foregroundColor(.primary)
                             .background(Color.purple)
                             .cornerRadius(10)
-                            .frame(width: 200, height: 50)
+                            .frame(maxWidth: .infinity)
                             .padding(10)
                             .padding(.bottom, 60)
                     }
