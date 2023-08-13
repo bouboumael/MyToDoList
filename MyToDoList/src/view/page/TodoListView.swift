@@ -9,9 +9,24 @@ import SwiftUI
 
 struct TodoListView: View {
     var body: some View {
-        VStack{
-            ForEach (1..<11) {_ in
-                TaskView()
+        ScrollView {
+            VStack {
+                Text("Mes taches en cours")
+                    .font(.title)
+                    .padding()
+                ForEach (1..<11) {_ in
+                    TaskView()
+                }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    //
+                } label: {
+                    Label("Add Item", systemImage: "plus")
+                    
+                }
             }
         }
     }

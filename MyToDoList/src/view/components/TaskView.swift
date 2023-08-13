@@ -9,7 +9,18 @@ import SwiftUI
 
 struct TaskView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Tache")
+            Spacer()
+            Text("\(Date(), formatter: dateFormatter)")
+            Spacer()
+            Image(systemName: "chevron.right.circle")
+        }
+        .font(.title3)
+        .padding()
+        .background(.cyan)
+        .cornerRadius(10.0)
+        .padding(.horizontal, 30)
     }
 }
 
