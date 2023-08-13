@@ -14,7 +14,7 @@ struct TaskView: View {
     
     var body: some View {
         NavigationLink {
-            DetailTaskView()
+            DetailTaskView(task: $task)
         } label: {
             HStack(alignment: .firstTextBaseline) {
                 Text(task.taskName!)
