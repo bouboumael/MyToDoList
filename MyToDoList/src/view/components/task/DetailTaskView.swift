@@ -1,10 +1,3 @@
-//
-//  DetailTaskView.swift
-//  MyToDoList
-//
-//  Created by Mael Chariault on 13/08/2023.
-//
-
 import SwiftUI
 
 struct DetailTaskView: View {
@@ -13,54 +6,43 @@ struct DetailTaskView: View {
 
     var body: some View {
         VStack {
-            List {
-                Section(header: HeaderView(title: "Tâche")) {
-                    Text(task.taskName!)
-                }
-                
-                Section(header: HeaderView(title: "Date limite")) {
-                    Text(formattedDate(from: task.deadline!))
-                }
+            VStack {
+                List {
+                    Section(header: HeaderView(title: "Tâche")) {
+                        Text(task.taskName!.capitalized)
+                    }
+                    
+                    Section(header: HeaderView(title: "Date limite")) {
+                        Text(formattedDate(from: task.deadline!))
+                    }
 
-                Section(header: HeaderView(title: "Définition")) {
-                    Text(task.definition!)
-                }
+                    Section(header: HeaderView(title: "Définition")) {
+                        Text(task.definition!.capitalized)
+                    }
 
-                Section(header: HeaderView(title: "Création")) {
-                    Text(formattedDate(from: task.createdAt!))
+                    Section(header: HeaderView(title: "Création")) {
+                        Text(formattedDate(from: task.createdAt!))
+                    }
+                    
+                    Section(header: HeaderActionView()) {}
                 }
+                .listStyle(GroupedListStyle())
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
-            .listStyle(GroupedListStyle())
-            
-            HStack {
-                Button(action: {
-                    // Action pour clore la tâche
-                }) {
-                    Text("Terminer la tâche")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.cyan)
-                        .cornerRadius(10)
-                }
-                
-                Spacer()
-                
-                Button(action: {
-                    // Action pour supprimer la tâche
-                }) {
-                    Text("Supprimer la tâche")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.red)
-                        .cornerRadius(10)
-                }
-            }
-            .padding()
+        
         }
         .navigationTitle("Détails")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    //
+                } label: {
+                    Label("Add Item", systemImage: "square.and.pencil")
+                }
+            }
+        }
     }
-
 
     func formattedDate(from date: Date) -> String {
         let formatter = DateFormatter()
@@ -82,6 +64,37 @@ struct HeaderView: View {
     }
 }
 
+struct HeaderActionView: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                // Action pour clore la tâche
+            }) {
+                Text("Clôturer")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.cyan)
+                    .cornerRadius(10)
+            }
+            
+            Spacer().frame(width: 20)
+            
+            Button(action: {
+                // Action pour supprimer la tâche
+            }) {
+                Text("Supprimer")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.red)
+                    .cornerRadius(10)
+            }
+            Spacer()
+        }
+        .padding()
+    }
+}
+
 struct DetailTaskView_Previews: PreviewProvider {
     static var previews: some View {
         let context = PersistenceController.preview.container.viewContext
@@ -93,4 +106,3 @@ struct DetailTaskView_Previews: PreviewProvider {
         return DetailTaskView(task: .constant(newTask))
     }
 }
-
