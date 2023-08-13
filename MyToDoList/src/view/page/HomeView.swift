@@ -36,7 +36,7 @@ struct HomeView: View {
                 }
             }
             .background(.cyan)
-            .navigationTitle("Accueil")
+            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .foregroundColor(.primary)
         }
@@ -45,6 +45,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
