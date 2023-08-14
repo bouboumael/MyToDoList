@@ -32,8 +32,8 @@ struct TodoListView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    //
+                NavigationLink {
+                    TaskFormularyView()
                 } label: {
                     Label("Add Item", systemImage: "plus")
                     

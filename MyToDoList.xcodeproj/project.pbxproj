@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30E324F2A8A7E3300AE777A /* TaskFormularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E324E2A8A7E3300AE777A /* TaskFormularyView.swift */; };
 		D3B62B392A88EE0900071676 /* FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B62B382A88EE0900071676 /* FormattedDate.swift */; };
 		D3B62B3B2A89011E00071676 /* DetailTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B62B3A2A89011E00071676 /* DetailTaskView.swift */; };
 		D3B8F0342A87DE3C000C5FC3 /* MyToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B8F0332A87DE3C000C5FC3 /* MyToDoListApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D30E324E2A8A7E3300AE777A /* TaskFormularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFormularyView.swift; sourceTree = "<group>"; };
 		D3B62B382A88EE0900071676 /* FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedDate.swift; sourceTree = "<group>"; };
 		D3B62B3A2A89011E00071676 /* DetailTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskView.swift; sourceTree = "<group>"; };
 		D3B8F0302A87DE3C000C5FC3 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			children = (
 				D3B8F07B2A8831E6000C5FC3 /* TaskView.swift */,
 				D3B62B3A2A89011E00071676 /* DetailTaskView.swift */,
+				D30E324E2A8A7E3300AE777A /* TaskFormularyView.swift */,
 			);
 			path = task;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				D3B8F0792A882953000C5FC3 /* TodoListView.swift in Sources */,
 				D3B8F0402A87DE3D000C5FC3 /* MyToDoList.xcdatamodeld in Sources */,
 				D3B62B392A88EE0900071676 /* FormattedDate.swift in Sources */,
+				D30E324F2A8A7E3300AE777A /* TaskFormularyView.swift in Sources */,
 				D3B8F0762A8823BF000C5FC3 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
