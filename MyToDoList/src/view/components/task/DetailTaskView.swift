@@ -8,7 +8,7 @@ struct DetailTaskView: View {
         VStack {
             List {
                 Section(header: HeaderView(title: "Tâche")) {
-                    Text(task.taskName!.capitalized)
+                    Text(task.taskName!)
                 }
                 
                 Section(header: HeaderView(title: "Date limite")) {
@@ -16,7 +16,7 @@ struct DetailTaskView: View {
                 }
                 
                 Section(header: HeaderView(title: "Description")) {
-                    Text(task.definition!.capitalized)
+                    Text(task.definition!)
                 }
                 
                 Section(header: HeaderView(title: "Date de Création")) {
