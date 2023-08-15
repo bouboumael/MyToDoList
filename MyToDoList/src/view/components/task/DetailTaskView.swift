@@ -16,7 +16,7 @@ struct DetailTaskView: View {
                 }
                 
                 Section(header: HeaderView(title: "Description")) {
-                    Text(task.definition!.capitalized)
+                    Text(task.definition!)
                 }
                 
                 Section(header: HeaderView(title: "Date de Création")) {
